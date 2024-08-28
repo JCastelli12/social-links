@@ -1,0 +1,124 @@
+:root {
+  --clr-primary-green: hsl(75, 94%, 57%);
+
+  --clr-neutral-white: hsl(0, 100%, 100%);
+  --clr-neutral-medium-gray: hsl(0, 0%, 20%);
+  --clr-neutral-dark-gray: hsl(0, 0%, 12%);
+  --clr-neutral-very-dark-gray: hsl(0, 0%, 8%);
+
+  --ff-inter: 'Inter', sans-serif;
+
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  --container-gap: 1.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+}
+
+picture,
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  font-family: var(--ff-inter);
+  font-weight: var(--fw-400);
+  background-color: var(--clr-neutral-very-dark-gray);
+  display: grid;
+  place-items: center;
+}
+
+.main-container {
+  max-width: calc(375px - 2rem);
+  margin-inline: 1rem;
+  padding: 1.5rem;
+  background-color: var(--clr-neutral-dark-gray);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: var(--container-gap);
+  border-radius: 1rem;
+}
+
+.profile-container {
+  display: grid;
+  place-items: center;
+  gap: var(--container-gap);
+}
+
+.profile-container__image {
+  border-radius: 50%;
+  width: 4.5rem;
+}
+
+.profile-container__name {
+  color: var(--clr-neutral-white);
+  font-size: 1.625rem;
+  font-weight: var(--fw-400);
+}
+
+.profile-container__location {
+  margin-top: -0.5rem;
+  color: var(--clr-primary-green);
+  font-size: 0.875rem;
+  font-weight: var(--fw-600);
+}
+
+.profile-container__description {
+  color: var(--clr-neutral-white);
+  font-size: 0.925rem;
+}
+
+.socials-container {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+
+.socials-container > a {
+  width: 100%;
+}
+
+.social {
+  background-color: var(--clr-neutral-medium-gray);
+  color: var(--clr-neutral-white);
+  width: 100%;
+  padding: 1rem;
+  font-weight: var(--fw-700);
+  border: none;
+  border-radius: 0.5rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.social:hover {
+  scale: 1.03;
+  background-color: var(--clr-primary-green);
+  color: var(--clr-neutral-medium-gray);
+  cursor: pointer;
+}
